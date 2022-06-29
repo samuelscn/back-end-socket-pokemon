@@ -6,7 +6,7 @@ class AuthenticateUserController:
     self.authenticateUser = authenticateUser
 
   def handle (self, socketRequest):
-    requiredFields = ['email', 'password']
+    requiredFields = ['username', 'password']
 
     for fields in requiredFields:
       if socketRequest[fields] == None:
@@ -14,5 +14,5 @@ class AuthenticateUserController:
     user_data = self.authenticateUser.execute(socketRequest)
     print('user data', user_data)
     if (user_data == None):
-      return { "msg": "Usuario inexistente!" }
+      return Errors.badRequest("Usuario inexistente!")
     return Errors.ok(user_data)

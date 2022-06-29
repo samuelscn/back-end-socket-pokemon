@@ -9,7 +9,7 @@ class AuthenticateUserRepo(AuthenticateUserRepositoryInterface):
       return None
     user_dict = { 
       "id": user_result[0],
-      "email": user_result[1],
+      "username": user_result[1],
       "password": user_result[2],
       "name": user_result[3]
     }
