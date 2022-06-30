@@ -15,7 +15,6 @@ class ListUserAccountRepo(ListUserAccountRepositoryInterface):
         { 
           "id": user[0],
           "username": user[1],
-          "password": user[2],
           "name": user[3]
         }
       )

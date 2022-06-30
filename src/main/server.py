@@ -1,16 +1,14 @@
 import socket
 import json
 from src.main.adapters.socket_adapters import SocketAdapters
-import requests
 
 HOST = 'localhost'
-PORT = 8221
+PORT = 8222
 tcp = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 orig = (HOST, PORT)
 tcp.bind(orig)
 tcp.listen(1)
 socketAdapters = SocketAdapters()
-
 # makeTeste =  { "route": 'user/create', "params": { "username": 'teste2@teste.com', "password": '123teste', "name": 'teste' } }
 # makeTeste =  { "route": 'trade/create', "params": { "received_user_id": 3, "sender_user_id": 2, "want_pokemon_id": 64, 'give_pokemon_id': 32 } }
 # makeTeste =  { "route": 'trade/solicitations', "params": { "id": 2 } }
