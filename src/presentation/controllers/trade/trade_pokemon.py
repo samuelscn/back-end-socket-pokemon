@@ -5,7 +5,7 @@ class TradePokemonController:
     self.tradePokemon = tradePokemon
 
   def handle (self, socketRequest):
-    requiredFields = ['id','inventory_id', 'want_pokemon_id', 'give_pokemon_id']
+    requiredFields = ['received_user_id','sender_user_id', 'want_pokemon_id', 'give_pokemon_id']
   
     for fields in requiredFields:
       if socketRequest[fields] == None:

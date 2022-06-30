@@ -4,6 +4,6 @@ class ListTradeSolicitationsController:
   def __init__ (self, listTradeSolicitations):
     self.listTradeSolicitations = listTradeSolicitations
 
-  def list (self, ):
-    trade_list = self.listTradeSolicitations.get()
+  def list (self, socketRequest):
+    trade_list = self.listTradeSolicitations.get(socketRequest["id"])
     return Errors.ok(trade_list)

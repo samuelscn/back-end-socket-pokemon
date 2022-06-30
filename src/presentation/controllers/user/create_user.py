@@ -12,5 +12,8 @@ class CreateUserController:
     for fields in requiredFields:
       if socketRequest[fields] == None:
         return Errors.badRequest(f"Missing {fields} Field")
-    self.addUserAccount.add(socketRequest)
+    result_add_user_account = self.addUserAccount.add(socketRequest)
+    if (result_add_user_account != None):
+      print(f'Error: {result_add_user_account}')
+      return Errors.badRequest(f"E-mail já existente!")
     return Errors.ok({})

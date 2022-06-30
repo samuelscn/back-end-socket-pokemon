@@ -7,4 +7,4 @@ class DbAddUserAccount(AddUserAccountInterface):
     self.add_user_account_repository = add_user_account_repository
 
   def add (self, accountUserData):
-    self.add_user_account_repository.add(accountUserData)
+    return self.add_user_account_repository.add(accountUserData)

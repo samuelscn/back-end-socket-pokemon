@@ -8,12 +8,12 @@ from src.data.protocols.user.add_user_account_repository import AddUserAccountRe
 class AddUserAccountRepo(AddUserAccountRepositoryInterface):
   
   def add(self, accountUserData):
-    insert(accountUserData)
+    insert_user_result = insert(accountUserData)
+    if (insert_user_result != None):
+      return insert_user_result
     user_result = getLastUser()
-    print('USER_RESULT', user_result)
     insertInventory(user_result[0])
     inventory_result = getLastInventory()
-    print('INVENTORY RESULT', inventory_result)
     for i in range(10):
       num = random.randint(1, 150)
       body = { "inventory_id": inventory_result[0], "pokemon_id": num }

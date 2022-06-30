@@ -3,9 +3,9 @@ from src.data.usecases.trade.db_list_trade_solicitations import DbListTradeSolic
 from src.infra.database.sqlite.repository.trade.list_trade_solicitations_repository.list_trade_solicitations import ListTradeSolicitationsRepo
 
 class ListTradeSolicitationsFactory:
-  def makeListTradeSolicitationsFactory():
+  def makeListTradeSolicitationsFactory(socketRequest):
     listTradeSolicitationsRepo = ListTradeSolicitationsRepo()
     dbListTradeSolicitations = DbListTradeSolicitations(listTradeSolicitationsRepo)
     listTradeSolicitationController = ListTradeSolicitationsController(dbListTradeSolicitations)
-    result = listTradeSolicitationController.list()
+    result = listTradeSolicitationController.list(socketRequest)
     return result

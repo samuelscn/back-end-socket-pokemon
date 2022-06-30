@@ -17,7 +17,7 @@ class SocketAdapters:
     if (socketRequest["route"] == 'user/inventory'):
       return ListUserInventoryFactory.makeListUserInventoryFactory(socketRequest["params"])
     if (socketRequest["route"] == 'trade/solicitations'):
-      return ListTradeSolicitationsFactory.makeListTradeSolicitationsFactory()
+      return ListTradeSolicitationsFactory.makeListTradeSolicitationsFactory(socketRequest["params"])
     if (socketRequest["route"] == 'trade/create'):
       return AddTradeSolicitationsFactory.makeAddTradeSolicitationsFactory(socketRequest["params"])
     if (socketRequest["route"] == 'trade/accecpt'):

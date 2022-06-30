@@ -1,4 +1,6 @@
 import sqlite3
+import sys
+import traceback
 
 con = sqlite3.connect('escambo.db')
 
@@ -7,9 +9,14 @@ def insert(body):
   with con:
     cur = con.cursor()
     query = "INSERT INTO user (email, password, name) VALUES (?, ?, ?)"
-    cur.execute(query, (body['username'], body['password'], body['name']))
-    result = cur.fetchone()
-  return result
+    try:
+      cur.execute(query, (body['username'], body['password'], body['name']))
+      con.commit()
+      result = cur.fetchone()
+      return result
+    except sqlite3.Error as er:
+      msg = ' '.join(er.args)
+      return msg
 
 # Recupera todas as informações GET
 def list():
