@@ -6,6 +6,7 @@ class ListUserInventoryController:
 
   def list (self, socketRequest):
     requiredFields = ["id"]
+    print('SOCKET REQUEST', socketRequest)
 
     for fields in requiredFields:
       if socketRequest[fields] == None:
