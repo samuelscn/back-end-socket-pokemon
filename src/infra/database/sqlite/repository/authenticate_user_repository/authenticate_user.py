@@ -10,7 +10,6 @@ class AuthenticateUserRepo(AuthenticateUserRepositoryInterface):
     user_dict = { 
       "id": user_result[0],
       "username": user_result[1],
-      "password": user_result[2],
       "name": user_result[3]
     }
     return user_dict
