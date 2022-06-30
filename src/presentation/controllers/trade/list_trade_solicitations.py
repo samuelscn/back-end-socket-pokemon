@@ -5,5 +5,10 @@ class ListTradeSolicitationsController:
     self.listTradeSolicitations = listTradeSolicitations
 
   def list (self, socketRequest):
+    requiredFields = ['id']
+
+    for fields in requiredFields:
+      if socketRequest[fields] == None:
+        return Errors.badRequest(f"Missing {fields} Field")
     trade_list = self.listTradeSolicitations.get(socketRequest["id"])
     return Errors.ok(trade_list)

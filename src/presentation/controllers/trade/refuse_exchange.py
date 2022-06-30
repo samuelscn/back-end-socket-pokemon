@@ -5,5 +5,10 @@ class RefuseExchangeController:
     self.refuseExchange = refuseExchange
 
   def handle (self, socketRequest):
+    requiredFields = ['id']
+
+    for fields in requiredFields:
+      if socketRequest[fields] == None:
+        return Errors.badRequest(f"Missing {fields} Field")
     self.refuseExchange.update(socketRequest["id"])
     return Errors.ok({})

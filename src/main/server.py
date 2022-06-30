@@ -22,7 +22,7 @@ while True:
   con, cliente = tcp.accept()
   print('Conectado por', cliente)
   while True:
-    msg = con.recv(1024)
+    msg = con.recv(2048)
     if not msg: break
     socketRequest = json.loads(msg)
     print(cliente, socketRequest)
