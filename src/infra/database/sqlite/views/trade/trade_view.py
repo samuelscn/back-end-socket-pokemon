@@ -47,6 +47,14 @@ def updateTradeStatus(id):
     cur.execute(query)
   return result
 
+def getOneSolicitation(id):
+  result = None
+  with con:
+    cur = con.cursor()
+    query = f"SELECT * FROM trade WHERE id = {id}"
+    cur.execute(query)
+    result = cur.fetchone()
+  return result
 
 
 

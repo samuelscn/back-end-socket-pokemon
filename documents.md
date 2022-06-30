@@ -54,7 +54,7 @@
         Response: { "statusCode": 400, body: { "msg": 'alguma msg' } }
 
 7. Realiza uma troca
-    Request: { "route": 'trade/accecpt', "params": { "received_user_id": 2, "sender_user_id": 3 , "want_pokemon_id": 64, "give_pokemon_id": 32 } }
+    Request: { "route": 'trade/accecpt', "params": { "id": 1 } }
     # Sucesso
         Response: { "statusCode": 200, body: {} }
     # Error

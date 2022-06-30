@@ -5,10 +5,10 @@ class TradePokemonController:
     self.tradePokemon = tradePokemon
 
   def handle (self, socketRequest):
-    requiredFields = ['received_user_id','sender_user_id', 'want_pokemon_id', 'give_pokemon_id']
+    requiredFields = ['id']
   
     for fields in requiredFields:
       if socketRequest[fields] == None:
         return Errors.badRequest(f"Missing {fields} Field")
-    self.tradePokemon.update(socketRequest)
+    self.tradePokemon.update(socketRequest["id"])
     return Errors.ok({})
