@@ -37,7 +37,7 @@ def getPokemonsInInventory(id):
   with con:
     cur = con.cursor()
     # "SELECT * FROM 'InventoryPokemon' AS ip INNER JOIN pokemon AS p ON p.id = ip.pokemon_id WHERE inventory_id = {id}"
-    query = f"SELECT ip.inventory_id, p.id, p.name, p.image FROM 'InventoryPokemon' AS ip INNER JOIN pokemon AS p ON p.id = ip.pokemon_id WHERE inventory_id = {id}"
+    query = f"SELECT ip.inventory_id, p.id, p.name, p.image FROM 'InventoryPokemon' AS ip INNER JOIN pokemon AS p ON p.id = ip.pokemon_id WHERE inventory_id = {id} LIMIT 5"
     cur.execute(query)
     result = cur.fetchall()
   return result
