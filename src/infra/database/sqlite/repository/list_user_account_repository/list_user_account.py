@@ -4,8 +4,11 @@ from src.data.protocols.user.list_user_account_repository import ListUserAccount
 
 class ListUserAccountRepo(ListUserAccountRepositoryInterface):
   
-  def get (self, ):
-    user_result = list()
+  def get (self, id):
+    if (id == 5000):
+      user_result = listWithoutId()
+    else: 
+      user_result = list(id)
     print('user_result', user_result)
     if (user_result == None):
       return None

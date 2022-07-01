@@ -19,11 +19,22 @@ def insert(body):
       return msg
 
 # Recupera todas as informações GET
-def list():
+def list(id):
   userList = []
   with con:
     cur = con.cursor()
-    query = "SELECT * FROM 'User' ORDER BY name ASC"
+    query = f"SELECT * FROM 'User' WHERE id <> {id} ORDER BY name ASC"
+    cur.execute(query)
+    result = cur.fetchall()
+    for data in result:
+      userList.append(data)
+  return userList
+
+def listWithoutId():
+  userList = []
+  with con:
+    cur = con.cursor()
+    query = f"SELECT * FROM 'User' ORDER BY name ASC"
     cur.execute(query)
     result = cur.fetchall()
     for data in result:

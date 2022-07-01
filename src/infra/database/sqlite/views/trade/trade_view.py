@@ -14,7 +14,7 @@ def listTradeWithoutStatusFinished(id):
   tradeList = []
   with con:
     cur = con.cursor()
-    query = f"SELECT * FROM 'Trade' AS t INNER JOIN pokemon AS p ON p.id = t.want_pokemon_id INNER JOIN pokemon AS p1 ON p1.id = t.give_pokemon_id INNER JOIN user AS u ON u.id = t.sender_user_id INNER JOIN user AS u1 ON u1.id = t.received_user_id WHERE status LIKE 'pending' AND received_user_id = {id} ORDER BY id ASC"
+    query = f"SELECT * FROM 'Trade' AS t INNER JOIN pokemon AS p ON p.id = t.want_pokemon_id INNER JOIN pokemon AS p1 ON p1.id = t.give_pokemon_id INNER JOIN user AS u ON u.id = t.sender_user_id INNER JOIN user AS u1 ON u1.id = t.received_user_id WHERE status LIKE 'pending' AND received_user_id = {id} AND sender_user_id <> {id} ORDER BY id ASC"
     cur.execute(query)
     result = cur.fetchall()
     for data in result:

@@ -5,5 +5,5 @@ class DbListUserAccount(ListUserAccountInterface):
   def __init__(self, list_user_account_repository):
     self.list_user_account_repository = list_user_account_repository
 
-  def get (self, ):
-    return self.list_user_account_repository.get()
+  def get (self, id):
+    return self.list_user_account_repository.get(id)

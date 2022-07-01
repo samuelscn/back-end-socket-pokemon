@@ -3,21 +3,13 @@ import json
 from src.main.adapters.socket_adapters import SocketAdapters
 
 HOST = 'localhost'
-PORT = 8221
+PORT = 8222
 tcp = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 orig = (HOST, PORT)
 tcp.bind(orig)
 tcp.listen(1)
 socketAdapters = SocketAdapters()
-# makeTeste =  { "route": 'user/create', "params": { "username": 'teste2@teste.com', "password": '123teste', "name": 'teste' } }
-# makeTeste =  { "route": 'trade/create', "params": { "received_user_id": 4, "sender_user_id": 2, "want_pokemon_id": 96, 'give_pokemon_id': 97 } }
-# makeTeste =  { "route": 'trade/solicitations', "params": { "id": 2 } }
-# makeTeste =  { "route": 'trade/accecpt', "params": { "received_user_id": 2, "sender_user_id": 3 , "want_pokemon_id": 64, "give_pokemon_id": 32 } }
-# makeTeste =  { "route": 'user/authenticate', "body": { "email": 'testee@teste.com', "password": '123teste' } }
-# makeTeste =  { "route": 'user/inventory', "params": { "id": 2 } }
-# print('makeTeste', makeTeste)
-# result = socketAdapters.execute(makeTeste)
-# print('resultServer', result)
+print(f'Servidor rodando na porta {PORT}...')
 while True:
   con, cliente = tcp.accept()
   print('Conectado por', cliente)

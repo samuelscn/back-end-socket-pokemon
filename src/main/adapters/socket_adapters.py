@@ -13,7 +13,7 @@ class SocketAdapters:
     if (socketRequest["route"] == 'login'):
       return AuthenticateUserFactory.makeAuthenticateUserFactory(socketRequest["params"])
     if (socketRequest["route"] == 'get-users'):
-      return ListUserAccountFactory.makeListUserAccountFactory()
+      return ListUserAccountFactory.makeListUserAccountFactory(socketRequest["params"])
     if (socketRequest["route"] == 'user/inventory'):
       return ListUserInventoryFactory.makeListUserInventoryFactory(socketRequest["params"])
     if (socketRequest["route"] == 'trade/solicitations'):
