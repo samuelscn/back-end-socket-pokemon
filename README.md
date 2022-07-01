@@ -30,6 +30,14 @@ Desenvolver um sistema de escambo no tema pokemon.
 
 ## ✦ Instalação
 
+Use o comando make run para executar e instalar as dependências do projeto
+
+```bash
+make run
+```
+
+Ou se preferir fazer a instalação dos pacotes manualmente,
+
 Use o pip3 para instalar as dependências do projeto
 
 ```bash
