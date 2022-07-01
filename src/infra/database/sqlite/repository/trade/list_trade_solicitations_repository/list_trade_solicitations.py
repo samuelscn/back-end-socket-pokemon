@@ -19,8 +19,8 @@ class ListTradeSolicitationsRepo(ListTradeSolicitationsRepositoryInterface):
           "status": trade_data[5],
           "want_pokemon_name": trade_data[7],
           "want_pokemon_image": trade_data[8],
-          "give_pokemon_name": trade_data[9],
-          "give_pokemon_image": trade_data[10],
+          "give_pokemon_name": trade_data[10],
+          "give_pokemon_image": trade_data[11],
           "received_user_name": trade_data[19],
           "sender_user_name": trade_data[15]
         }
