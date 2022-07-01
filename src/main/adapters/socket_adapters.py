@@ -20,7 +20,7 @@ class SocketAdapters:
       return ListTradeSolicitationsFactory.makeListTradeSolicitationsFactory(socketRequest["params"])
     if (socketRequest["route"] == 'trade/create'):
       return AddTradeSolicitationsFactory.makeAddTradeSolicitationsFactory(socketRequest["params"])
-    if (socketRequest["route"] == 'trade/accecpt'):
+    if (socketRequest["route"] == 'trade/accept'):
       return TradePokemonFactory.makeTradePokemonFactory(socketRequest["params"])
     if (socketRequest["route"] == 'trade/refuse'):
       return RefuseExchangeFactory.makeRefuseExchangeFactory(socketRequest["params"])

@@ -11,6 +11,7 @@ class ListTradeSolicitationsRepo(ListTradeSolicitationsRepositoryInterface):
     for trade_data in trade_solicitation_result:
       trade_solicitation_dict.append(
         {
+          "id": trade_data[0],
           "received_user_id": trade_data[1],
           "sender_user_id": trade_data[2],
           "want_pokemon_id": trade_data[3],
