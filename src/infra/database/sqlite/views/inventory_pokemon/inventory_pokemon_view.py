@@ -1,6 +1,6 @@
 import sqlite3
 
-con = sqlite3.connect('escambo.db')
+con = sqlite3.connect('escambo.db', check_same_thread=False)
 
 # Inserir informações POST
 def insertInventoryPokemon(body):
