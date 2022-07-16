@@ -2,7 +2,7 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-import refuse_exchange_pb2 as refuse__exchange__pb2
+from src.main.middlewares.grpc_middlewares.protos.trade.refuse_exchange_proto import refuse_exchange_pb2 as refuse__exchange__pb2
 
 
 class RefuseExchangeStub(object):

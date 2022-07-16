@@ -2,7 +2,7 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-import list_trade_solicitations_pb2 as list__trade__solicitations__pb2
+from src.main.middlewares.grpc_middlewares.protos.trade.list_trade_solicitations_proto import list_trade_solicitations_pb2 as list__trade__solicitations__pb2
 
 
 class ListTradeSolicitationsStub(object):

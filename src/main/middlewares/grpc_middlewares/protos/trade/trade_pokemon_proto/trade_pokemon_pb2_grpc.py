@@ -2,7 +2,7 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-import trade_pokemon_pb2 as trade__pokemon__pb2
+from src.main.middlewares.grpc_middlewares.protos.trade.trade_pokemon_proto import trade_pokemon_pb2 as trade__pokemon__pb2
 
 
 class TradePokemonStub(object):
