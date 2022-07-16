@@ -3,7 +3,7 @@ from src.main.middlewares.grpc_middlewares.protos.trade.add_trade_solicitations_
 from src.main.middlewares.grpc_middlewares.protos.trade.add_trade_solicitations_proto import add_trade_solicitations_pb2_grpc
 from src.main.factory.trade.add_trade_solicitations_factory import AddTradeSolicitationsFactory
 
-class AddTradeSolicitationsService(add_trade_solicitations_pb2_grpc.AddUserAccountServicer):
+class AddTradeSolicitationsService(add_trade_solicitations_pb2_grpc.AddTradeSolicitationsServicer):
     def makeAddTradeSolicitationsFactory(self, request, context):
         new_request = { 
             "received_user_id": request.received_user_id,
