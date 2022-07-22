@@ -14,7 +14,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1elist_trade_solicitations.proto\x12\x18list_trade_solicitations\"\x15\n\x07Request\x12\n\n\x02id\x18\x01 \x01(\x05\"x\n\x08Response\x12\x12\n\nstatusCode\x18\x01 \x01(\x05\x12\x36\n\ttradeList\x18\x02 \x03(\x0b\x32#.list_trade_solicitations.TradeList\x12\x14\n\x07message\x18\x03 \x01(\tH\x00\x88\x01\x01\x42\n\n\x08_message\"\xa3\x02\n\tTradeList\x12\x18\n\x10received_user_id\x18\x01 \x01(\x05\x12\x16\n\x0esender_user_id\x18\x02 \x01(\x05\x12\x17\n\x0fwant_pokemon_id\x18\x03 \x01(\x05\x12\x17\n\x0fgive_pokemon_id\x18\x04 \x01(\x05\x12\x0e\n\x06status\x18\x05 \x01(\t\x12\x19\n\x11want_pokemon_name\x18\x06 \x01(\t\x12\x1a\n\x12want_pokemon_image\x18\x07 \x01(\t\x12\x19\n\x11give_pokemon_name\x18\x08 \x01(\t\x12\x1a\n\x12give_pokemon_image\x18\t \x01(\t\x12\x1a\n\x12received_user_name\x18\n \x01(\t\x12\x18\n\x10sender_user_name\x18\x0b \x01(\t2\x84\x01\n\x16ListTradeSolicitations\x12j\n!makeListTradeSolicitationsFactory\x12!.list_trade_solicitations.Request\x1a\".list_trade_solicitations.Responseb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1elist_trade_solicitations.proto\x12\x18list_trade_solicitations\"\x15\n\x07Request\x12\n\n\x02id\x18\x01 \x01(\x05\"x\n\x08Response\x12\x12\n\nstatusCode\x18\x01 \x01(\x05\x12\x36\n\ttradeList\x18\x02 \x03(\x0b\x32#.list_trade_solicitations.TradeList\x12\x14\n\x07message\x18\x03 \x01(\tH\x00\x88\x01\x01\x42\n\n\x08_message\"\xaf\x02\n\tTradeList\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x18\n\x10received_user_id\x18\x02 \x01(\x05\x12\x16\n\x0esender_user_id\x18\x03 \x01(\x05\x12\x17\n\x0fwant_pokemon_id\x18\x04 \x01(\x05\x12\x17\n\x0fgive_pokemon_id\x18\x05 \x01(\x05\x12\x0e\n\x06status\x18\x06 \x01(\t\x12\x19\n\x11want_pokemon_name\x18\x07 \x01(\t\x12\x1a\n\x12want_pokemon_image\x18\x08 \x01(\t\x12\x19\n\x11give_pokemon_name\x18\t \x01(\t\x12\x1a\n\x12give_pokemon_image\x18\n \x01(\t\x12\x1a\n\x12received_user_name\x18\x0b \x01(\t\x12\x18\n\x10sender_user_name\x18\x0c \x01(\t2\x84\x01\n\x16ListTradeSolicitations\x12j\n!makeListTradeSolicitationsFactory\x12!.list_trade_solicitations.Request\x1a\".list_trade_solicitations.Responseb\x06proto3')
 
 
 
@@ -51,7 +51,7 @@ if _descriptor._USE_C_DESCRIPTORS == False:
   _RESPONSE._serialized_start=83
   _RESPONSE._serialized_end=203
   _TRADELIST._serialized_start=206
-  _TRADELIST._serialized_end=497
-  _LISTTRADESOLICITATIONS._serialized_start=500
-  _LISTTRADESOLICITATIONS._serialized_end=632
+  _TRADELIST._serialized_end=509
+  _LISTTRADESOLICITATIONS._serialized_start=512
+  _LISTTRADESOLICITATIONS._serialized_end=644
 # @@protoc_insertion_point(module_scope)

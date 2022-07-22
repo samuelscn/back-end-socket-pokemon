@@ -15,6 +15,7 @@ class ListTradeSolicitationsService(list_trade_solicitations_pb2_grpc.ListTradeS
         array_trade = []
         for trade in result['body']:
             user = list_trade_solicitations_pb2.TradeList(
+                id = trade['id'],
                 received_user_id = trade['received_user_id'],
                 sender_user_id = trade['sender_user_id'],
                 want_pokemon_id = trade['want_pokemon_id'],
