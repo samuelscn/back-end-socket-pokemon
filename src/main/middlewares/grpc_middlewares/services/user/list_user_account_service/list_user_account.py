@@ -16,7 +16,7 @@ class ListUserAccountService(list_user_account_pb2_grpc.ListUserAccountServicer)
             new_request = {}
         result = ListUserAccountFactory.makeListUserAccountFactory(new_request)
         if (result['statusCode'] == 400):
-            response = list_user_account_pb2.Response(statusCode = str(result['statusCode']), message = result['body']['msg'])
+            response = list_user_account_pb2.Response(statusCode = result['statusCode'], message = result['body']['msg'])
             return response
         array_user = []
         for user in result['body']:

@@ -4,7 +4,7 @@ from src.main.middlewares.grpc_middlewares.protos.trade.trade_pokemon_proto impo
 from src.main.factory.trade.trade_pokemon_factory import TradePokemonFactory
 
 class TradePokemonService(trade_pokemon_pb2_grpc.TradePokemonServicer):
-    def makeRefuseExchangeFactory(self, request, context):
+    def makeTradePokemonFactory(self, request, context):
         new_request = { 
             "id": request.id
         }
