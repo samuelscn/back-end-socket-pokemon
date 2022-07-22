@@ -4,6 +4,7 @@ import grpc
 
 from src.main.middlewares.grpc_middlewares.protos.user.add_user_account_proto import add_user_account_pb2 as add__user__account__pb2
 
+
 class AddUserAccountStub(object):
     """Missing associated documentation comment in .proto file."""
 

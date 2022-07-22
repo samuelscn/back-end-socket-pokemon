@@ -14,7 +14,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x16\x61\x64\x64_user_account.proto\x12\x10\x61\x64\x64_user_account\";\n\x07Request\x12\x10\n\x08username\x18\x01 \x01(\t\x12\x10\n\x08password\x18\x02 \x01(\t\x12\x0c\n\x04name\x18\x03 \x01(\t\"\x1e\n\x08Response\x12\x12\n\nstatusCode\x18\x01 \x01(\t2a\n\x0e\x41\x64\x64UserAccount\x12O\n\x16makeUserAccountFactory\x12\x19.add_user_account.Request\x1a\x1a.add_user_account.Responseb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x16\x61\x64\x64_user_account.proto\x12\x10\x61\x64\x64_user_account\";\n\x07Request\x12\x10\n\x08username\x18\x01 \x01(\t\x12\x10\n\x08password\x18\x02 \x01(\t\x12\x0c\n\x04name\x18\x03 \x01(\t\"\x1e\n\x08Response\x12\x12\n\nstatusCode\x18\x01 \x01(\x05\x32\x61\n\x0e\x41\x64\x64UserAccount\x12O\n\x16makeUserAccountFactory\x12\x19.add_user_account.Request\x1a\x1a.add_user_account.Responseb\x06proto3')
 
 
 

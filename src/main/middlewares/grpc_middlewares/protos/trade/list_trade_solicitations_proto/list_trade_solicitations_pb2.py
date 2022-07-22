@@ -14,12 +14,13 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1elist_trade_solicitations.proto\x12\x18list_trade_solicitations\"\x15\n\x07Request\x12\n\n\x02id\x18\x01 \x01(\x05\"\xf0\x04\n\x08Response\x12\x12\n\nstatusCode\x18\x01 \x01(\x05\x12\x1d\n\x10received_user_id\x18\x02 \x01(\x05H\x00\x88\x01\x01\x12\x1b\n\x0esender_user_id\x18\x03 \x01(\x05H\x01\x88\x01\x01\x12\x1c\n\x0fwant_pokemon_id\x18\x04 \x01(\x05H\x02\x88\x01\x01\x12\x1c\n\x0fgive_pokemon_id\x18\x05 \x01(\x05H\x03\x88\x01\x01\x12\x13\n\x06status\x18\x06 \x01(\tH\x04\x88\x01\x01\x12\x1e\n\x11want_pokemon_name\x18\x07 \x01(\tH\x05\x88\x01\x01\x12\x1f\n\x12want_pokemon_image\x18\x08 \x01(\tH\x06\x88\x01\x01\x12\x1e\n\x11give_pokemon_name\x18\t \x01(\tH\x07\x88\x01\x01\x12\x1f\n\x12give_pokemon_image\x18\n \x01(\tH\x08\x88\x01\x01\x12\x1f\n\x12received_user_name\x18\x0b \x01(\tH\t\x88\x01\x01\x12\x1d\n\x10sender_user_name\x18\x0c \x01(\tH\n\x88\x01\x01\x12\x14\n\x07message\x18\r \x01(\tH\x0b\x88\x01\x01\x42\x13\n\x11_received_user_idB\x11\n\x0f_sender_user_idB\x12\n\x10_want_pokemon_idB\x12\n\x10_give_pokemon_idB\t\n\x07_statusB\x14\n\x12_want_pokemon_nameB\x15\n\x13_want_pokemon_imageB\x14\n\x12_give_pokemon_nameB\x15\n\x13_give_pokemon_imageB\x15\n\x13_received_user_nameB\x13\n\x11_sender_user_nameB\n\n\x08_message2\x84\x01\n\x16ListTradeSolicitations\x12j\n!makeListTradeSolicitationsFactory\x12!.list_trade_solicitations.Request\x1a\".list_trade_solicitations.Responseb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1elist_trade_solicitations.proto\x12\x18list_trade_solicitations\"\x15\n\x07Request\x12\n\n\x02id\x18\x01 \x01(\x05\"x\n\x08Response\x12\x12\n\nstatusCode\x18\x01 \x01(\x05\x12\x36\n\ttradeList\x18\x02 \x03(\x0b\x32#.list_trade_solicitations.TradeList\x12\x14\n\x07message\x18\x03 \x01(\tH\x00\x88\x01\x01\x42\n\n\x08_message\"\xa3\x02\n\tTradeList\x12\x18\n\x10received_user_id\x18\x01 \x01(\x05\x12\x16\n\x0esender_user_id\x18\x02 \x01(\x05\x12\x17\n\x0fwant_pokemon_id\x18\x03 \x01(\x05\x12\x17\n\x0fgive_pokemon_id\x18\x04 \x01(\x05\x12\x0e\n\x06status\x18\x05 \x01(\t\x12\x19\n\x11want_pokemon_name\x18\x06 \x01(\t\x12\x1a\n\x12want_pokemon_image\x18\x07 \x01(\t\x12\x19\n\x11give_pokemon_name\x18\x08 \x01(\t\x12\x1a\n\x12give_pokemon_image\x18\t \x01(\t\x12\x1a\n\x12received_user_name\x18\n \x01(\t\x12\x18\n\x10sender_user_name\x18\x0b \x01(\t2\x84\x01\n\x16ListTradeSolicitations\x12j\n!makeListTradeSolicitationsFactory\x12!.list_trade_solicitations.Request\x1a\".list_trade_solicitations.Responseb\x06proto3')
 
 
 
 _REQUEST = DESCRIPTOR.message_types_by_name['Request']
 _RESPONSE = DESCRIPTOR.message_types_by_name['Response']
+_TRADELIST = DESCRIPTOR.message_types_by_name['TradeList']
 Request = _reflection.GeneratedProtocolMessageType('Request', (_message.Message,), {
   'DESCRIPTOR' : _REQUEST,
   '__module__' : 'list_trade_solicitations_pb2'
@@ -34,14 +35,23 @@ Response = _reflection.GeneratedProtocolMessageType('Response', (_message.Messag
   })
 _sym_db.RegisterMessage(Response)
 
+TradeList = _reflection.GeneratedProtocolMessageType('TradeList', (_message.Message,), {
+  'DESCRIPTOR' : _TRADELIST,
+  '__module__' : 'list_trade_solicitations_pb2'
+  # @@protoc_insertion_point(class_scope:list_trade_solicitations.TradeList)
+  })
+_sym_db.RegisterMessage(TradeList)
+
 _LISTTRADESOLICITATIONS = DESCRIPTOR.services_by_name['ListTradeSolicitations']
 if _descriptor._USE_C_DESCRIPTORS == False:
 
   DESCRIPTOR._options = None
   _REQUEST._serialized_start=60
   _REQUEST._serialized_end=81
-  _RESPONSE._serialized_start=84
-  _RESPONSE._serialized_end=708
-  _LISTTRADESOLICITATIONS._serialized_start=711
-  _LISTTRADESOLICITATIONS._serialized_end=843
+  _RESPONSE._serialized_start=83
+  _RESPONSE._serialized_end=203
+  _TRADELIST._serialized_start=206
+  _TRADELIST._serialized_end=497
+  _LISTTRADESOLICITATIONS._serialized_start=500
+  _LISTTRADESOLICITATIONS._serialized_end=632
 # @@protoc_insertion_point(module_scope)

@@ -12,16 +12,20 @@ message Request {
 
 message Response {
   int32 statusCode = 1;
-  optional int32 received_user_id = 2;
-  optional int32 sender_user_id = 3;
-  optional int32 want_pokemon_id = 4;
-  optional int32 give_pokemon_id = 5;
-  optional string status = 6;
-  optional string want_pokemon_name = 7;
-  optional string want_pokemon_image = 8;
-  optional string give_pokemon_name = 9;
-  optional string give_pokemon_image = 10;
-  optional string received_user_name = 11;
-  optional string sender_user_name = 12;
-  optional string message = 13;
+  repeated TradeList tradeList = 2;
+  optional string message = 3;
+}
+
+message TradeList {
+  int32 received_user_id = 1;
+  int32 sender_user_id = 2;
+  int32 want_pokemon_id = 3;
+  int32 give_pokemon_id = 4;
+  string status = 5;
+  string want_pokemon_name = 6;
+  string want_pokemon_image = 7;
+  string give_pokemon_name = 8;
+  string give_pokemon_image = 9;
+  string received_user_name = 10;
+  string sender_user_name = 11;
 }

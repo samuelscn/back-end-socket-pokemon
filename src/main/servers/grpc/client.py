@@ -25,7 +25,7 @@ import grpc
 
 def run():
     with grpc.insecure_channel('localhost:50052') as channel:
-        route = 'user/inventory'
+        route = 'trade/solicitations'
         if (route == 'login'):
             stub = authenticate_user_pb2_grpc.AuthenticateUserStub(channel)
             request = authenticate_user_pb2.Request(username = "teste82@teste.com", password = "teste123")
@@ -63,7 +63,7 @@ def run():
             return response
         if (route == 'trade/solicitations'):
             stub = list_trade_solicitations_pb2_grpc.ListTradeSolicitationsStub(channel)
-            request = list_trade_solicitations_pb2.Request(id = 1)
+            request = list_trade_solicitations_pb2.Request(id = 4)
             response = stub.makeListTradeSolicitationsFactory(request)
             print('RESPONSE', response)
             return response

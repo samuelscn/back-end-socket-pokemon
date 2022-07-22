@@ -17,7 +17,7 @@ message Request {
 // }
 
 message Response {
-  string statusCode = 1;
+  int32 statusCode = 1;
   repeated User users = 2;
   optional string message = 3;
 }

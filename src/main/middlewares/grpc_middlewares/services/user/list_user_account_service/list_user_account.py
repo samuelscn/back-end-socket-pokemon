@@ -22,6 +22,5 @@ class ListUserAccountService(list_user_account_pb2_grpc.ListUserAccountServicer)
         for user in result['body']:
             user = list_user_account_pb2.User(id = user['id'], username = user['username'], name = user['name'])
             array_user.append(user)
-        response = list_user_account_pb2.Response(statusCode = str(result['statusCode']), users = array_user)
-        print('RESPONDE POR FAVOR', response)
+        response = list_user_account_pb2.Response(statusCode = result['statusCode'], users = array_user)
         return response
