@@ -15,7 +15,7 @@ from src.main.factory.trade.trade_pokemon_factory import TradePokemonFactory
 
 api_routes_bp = Blueprint("api_routes", __name__)
 
-@api_routes_bp.route("/api/user", methods=["GET"])
+@api_routes_bp.route("/api/get-users", methods=["GET"])
 def getAllUsers():
   result = ListUserAccountFactory.makeListUserAccountFactory(request.json["params"])
   return jsonify(result)
@@ -25,23 +25,23 @@ def getUserInventory():
   result = ListUserInventoryFactory.makeListUserInventoryFactory(request.json["params"])
   return jsonify(result)
 
-@api_routes_bp.route("/api/user", methods=["POST"])
+@api_routes_bp.route("/api/user/create", methods=["POST"])
 def createUser(self):
   result = AddUserAccountFactory.makeUserAccountFactory(request.json["params"])
   return jsonify(result)
 
-@api_routes_bp.route("/api/user/authenticate", methods=["GET"])
+@api_routes_bp.route("/api/login", methods=["GET"])
 def getUser(self):
   result = AuthenticateUserFactory.makeAuthenticateUserFactory(request.json["params"])
   return jsonify(result)
 
 # Trade Routes
-@api_routes_bp.route("/api/trade", methods=["GET"])
+@api_routes_bp.route("/api/trade/solicitations", methods=["GET"])
 def getTradeSolicitation(self):
   result = ListTradeSolicitationsFactory.makeListTradeSolicitationsFactory(request.json["params"])
   return jsonify(result)
 
-@api_routes_bp.route("/api/trade", methods=["POST"])
+@api_routes_bp.route("/api/trade/create", methods=["POST"])
 def createTradeSolicitation(self):
   result = AddTradeSolicitationsFactory.makeAddTradeSolicitationsFactory(request.json["params"])
   return jsonify(result)
@@ -51,7 +51,7 @@ def refuseTradeSolicitation(self):
   result = RefuseExchangeFactory.makeRefuseExchangeFactory(request.json["params"])
   return jsonify(result)
 
-@api_routes_bp.route("/api/trade/refuse", methods=["PUT"])
+@api_routes_bp.route("/api/trade/accept", methods=["PUT"])
 def tradePokemon(self):
   result = TradePokemonFactory.makeTradePokemonFactory(request.json["params"])
   return jsonify(result)
