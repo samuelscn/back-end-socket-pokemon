@@ -26,32 +26,32 @@ def getUserInventory():
   return jsonify(result)
 
 @api_routes_bp.route("/api/user/create", methods=["POST"])
-def createUser(self):
+def createUser():
   result = AddUserAccountFactory.makeUserAccountFactory(request.json["params"])
   return jsonify(result)
 
 @api_routes_bp.route("/api/login", methods=["GET"])
-def getUser(self):
+def getUser():
   result = AuthenticateUserFactory.makeAuthenticateUserFactory(request.json["params"])
   return jsonify(result)
 
 # Trade Routes
 @api_routes_bp.route("/api/trade/solicitations", methods=["GET"])
-def getTradeSolicitation(self):
+def getTradeSolicitation():
   result = ListTradeSolicitationsFactory.makeListTradeSolicitationsFactory(request.json["params"])
   return jsonify(result)
 
 @api_routes_bp.route("/api/trade/create", methods=["POST"])
-def createTradeSolicitation(self):
+def createTradeSolicitation():
   result = AddTradeSolicitationsFactory.makeAddTradeSolicitationsFactory(request.json["params"])
   return jsonify(result)
 
 @api_routes_bp.route("/api/trade/refuse", methods=["PUT"])
-def refuseTradeSolicitation(self):
+def refuseTradeSolicitation():
   result = RefuseExchangeFactory.makeRefuseExchangeFactory(request.json["params"])
   return jsonify(result)
 
 @api_routes_bp.route("/api/trade/accept", methods=["PUT"])
-def tradePokemon(self):
+def tradePokemon():
   result = TradePokemonFactory.makeTradePokemonFactory(request.json["params"])
   return jsonify(result)
